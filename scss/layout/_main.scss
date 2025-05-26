@@ -1,0 +1,11 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+/*Nuestro Menu usando Grids*/
+.nuestro-menu{
+    grid-area: n-menu;
+    @include flex-column;
+    justify-items:center;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+
+/*Mixins flex*/
+@mixin flex-column{
+    display:flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display:flex;
+    flex-direction: row;
+}
+@mixin flex-column-center{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include flex-column;
+    align-items: center;
+    
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Mixins animations y transforms*/
+@mixin pulse{
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover{
+        animation: pulse 0.6s ease;
+    }
+}
+@mixin jump{
+    transition: transform 0.5s ease;
+
+    &:hover{
+        transform: scale(1.05) translateY(-5px);
+    }
+}
+/*Mixins image*/
+@mixin cover-center{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;       
+    object-position: center; 
+}
+@mixin size-img{
+    width: 300px;
+    height: 534px;
+}

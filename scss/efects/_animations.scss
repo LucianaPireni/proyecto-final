@@ -1,0 +1,139 @@
+@use '../base/mixins' as *;
+
+
+/*Animations*/
+@keyframes slideInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInUp{
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes pulse{
+    0% , 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/*Header*/
+.logo{
+    animation: slideInLeft 1s ease-out forwards;
+}
+/*Inicio*/
+.slogan{
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+.promo-1{
+    animation: slideInLeft 1s ease forwards;
+    @media (max-width: 768px) {
+        animation: none;
+    }
+}
+.promo-2{
+    animation: fadeInUp 1s ease forwards;
+    @media (max-width: 768px) {
+        animation: none;
+    }
+}
+.promo-3{
+    animation: slideInRight 1s ease forwards;
+    @media (max-width: 768px) {
+        animation: none;
+    }
+}
+/*Nuestro Menú*/
+.nosotros-y-menu{
+    animation: fadeInUp 1s ease forwards;
+}
+
+.pizzas{
+    animation: slideInLeft 1s ease forwards;
+    animation-delay: 0.4s;
+}
+.empanadas{
+    animation: slideInLeft 1s ease forwards;
+    animation-delay: 0.2s;
+    @media (max-width: 768px) {
+        animation-delay: 0.4s;  
+    }
+}
+.canastitas{
+    animation: slideInRight 1s ease forwards;
+    animation-delay: 0.2s;
+    @media (max-width: 768px) {
+        animation-delay: 0.4s;  
+    }
+}
+.otros{
+    animation: slideInRight 1s ease forwards;
+    animation-delay: 0.4s;
+}
+.postres{
+    animation: fadeIn 1s ease-in forwards;
+}
+/*Sucursales*/
+.mapa{
+    animation: fadeInUp 1s ease forwards;  
+}
+.recoleta{
+    animation: slideInLeft 1s ease forwards;
+}
+.belgrano{
+    animation: fadeInUp 1s ease forwards;  
+}
+.palermo{
+    animation: slideInRight 1s ease forwards;
+}
+/*Eventos*/
+.preguntas{
+    animation: fadeIn 1s ease-in forwards;
+}
+.eventos-img-banner{
+    animation: fadeInUp 1s ease forwards;  
+}
+/*Contacto*/
+.img-contacto{
+    animation: fadeIn 1s ease-in forwards;
+}
+/*Footer*/
+.redes-enlaces a{
+    @include pulse;
+}
+.redes-enlaces-nm a{
+    @include pulse;
+}

@@ -1,0 +1,82 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+
+/*INICIO Y CONTACTO usando Bootstrap*/
+.pie{
+    background-color: $color-2;
+    .redes-enlaces{
+        width: 70%;
+    }
+    .delivery-telefono p{
+        color: $primary-color;
+        font-size: 1.4em;
+        margin-bottom: 0px;
+    }
+    .pie-final p{
+        font-size: 0.8em;
+        margin-bottom: 0px;
+    }
+}
+
+/*NUESTRO MENU usando Grids*/
+.pie-nm{
+    grid-area: foo;
+    background-color: $color-2; 
+    @include flex-column;
+    .pie-elem-nm{
+        @include flex-row;
+        justify-content:space-between;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .logo-final-nm{
+        width: 33%;
+        @include flex-center;
+        
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        
+    }
+    .redes-nm{
+        @include flex-column-center;
+        width: 33%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        .redes-enlaces-nm{
+            @include flex-space-evenly;
+            flex-direction: row;
+            width: 100%;
+        }
+    }
+    .delivery-nm{
+        @include flex-column-center;
+        width: 33%;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        .delivery-telefono-nm{
+            display: flex;
+            align-items: center;
+        }
+        p{
+            margin: 10px;
+            color: $primary-color;
+            font-size: 1.4em;
+        }
+    }
+    .pie-final-nm{
+        width: 100%;
+        font-size: 0.8em;
+        text-align: center;
+    }
+}
+
+
+
+
