@@ -85,14 +85,19 @@ h5 {
   position: relative;
   z-index: 1;
   width: 100%;
-  font-size: 3rem;
   color: #ffffff;
   text-align: center;
 }
 .slogan .banner-slogan .texto-banner {
   color: #ffffff;
+  font-size: 3rem;
   text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
   font-family: fantasy;
+}
+@media (max-width: 576px) {
+  .slogan .banner-slogan .texto-banner {
+    font-size: 2rem;
+  }
 }
 
 /*Nuestro Menú*/
@@ -225,7 +230,7 @@ h5 {
 }
 @media (max-width: 768px) {
   .promo-1 {
-    animation: none;
+    animation: fadeInUp 1s ease forwards;
   }
 }
 
@@ -234,7 +239,7 @@ h5 {
 }
 @media (max-width: 768px) {
   .promo-2 {
-    animation: none;
+    animation: fadeInUp 1s ease forwards;
   }
 }
 
@@ -243,7 +248,7 @@ h5 {
 }
 @media (max-width: 768px) {
   .promo-3 {
-    animation: none;
+    animation: fadeInUp 1s ease forwards;
   }
 }
 
@@ -288,19 +293,19 @@ h5 {
 
 /*Sucursales*/
 .mapa {
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
 .recoleta {
-  animation: slideInLeft 1s ease forwards;
+  animation: slideInLeft 2s ease forwards;
 }
 
 .belgrano {
-  animation: fadeInUp 1s ease forwards;
+  animation: fadeInUp 2s ease forwards;
 }
 
 .palermo {
-  animation: slideInRight 1s ease forwards;
+  animation: slideInRight 2s ease forwards;
 }
 
 /*Eventos*/
