@@ -92,7 +92,6 @@ h5 {
   color: #ffffff;
   font-size: 3rem;
   text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red, 0 0 40px red, 0 0 80px red;
-  font-family: fantasy;
 }
 @media (max-width: 576px) {
   .slogan .banner-slogan .texto-banner {
